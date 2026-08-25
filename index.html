@@ -562,21 +562,11 @@
                 mouseover: highlightFeature,
             });
             var popupContent = '<table>\
-                    <tr><td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(String(feature.properties['id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['F_id'] !== null ? autolinker.link(String(feature.properties['F_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['cables'] !== null ? autolinker.link(String(feature.properties['cables']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['circuits'] !== null ? autolinker.link(String(feature.properties['circuits']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['descriptio'] !== null ? autolinker.link(String(feature.properties['descriptio']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['frequency'] !== null ? autolinker.link(String(feature.properties['frequency']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['line'] !== null ? autolinker.link(String(feature.properties['line']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(String(feature.properties['name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['note'] !== null ? autolinker.link(String(feature.properties['note']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['operator'] !== null ? autolinker.link(String(feature.properties['operator']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['source'] !== null ? autolinker.link(String(feature.properties['source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['voltage'] !== null ? autolinker.link(String(feature.properties['voltage']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['wires'] !== null ? autolinker.link(String(feature.properties['wires']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['length'] !== null ? autolinker.link(String(feature.properties['length']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                </table>';
+                <tr><td><b>Name:</b></td><td>' + (feature.properties['name'] !== null ? autolinker.link(String(feature.properties['name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+                <tr><td><b>Operator:</b></td><td>' + (feature.properties['operator'] !== null ? autolinker.link(String(feature.properties['operator']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+                <tr><td><b>Source:</b></td><td>' + (feature.properties['source'] !== null ? autolinker.link(String(feature.properties['source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+                <tr><td><b>Voltage:</b></td><td>' + (feature.properties['voltage'] !== null ? autolinker.link(String(feature.properties['voltage']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+            </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
             layer.on('popupopen', function(e) {
                 addClassToPopupIfMedia(content, e.popup);
@@ -626,21 +616,11 @@
                 mouseover: highlightFeature,
             });
             var popupContent = '<table>\
-                    <tr><td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(String(feature.properties['id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['F_id'] !== null ? autolinker.link(String(feature.properties['F_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['cables'] !== null ? autolinker.link(String(feature.properties['cables']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['circuits'] !== null ? autolinker.link(String(feature.properties['circuits']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['descriptio'] !== null ? autolinker.link(String(feature.properties['descriptio']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['frequency'] !== null ? autolinker.link(String(feature.properties['frequency']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['line'] !== null ? autolinker.link(String(feature.properties['line']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(String(feature.properties['name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['note'] !== null ? autolinker.link(String(feature.properties['note']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['operator'] !== null ? autolinker.link(String(feature.properties['operator']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['source'] !== null ? autolinker.link(String(feature.properties['source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['voltage'] !== null ? autolinker.link(String(feature.properties['voltage']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['wires'] !== null ? autolinker.link(String(feature.properties['wires']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['length'] !== null ? autolinker.link(String(feature.properties['length']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                </table>';
+                <tr><td><b>Name:</b></td><td>' + (feature.properties['name'] !== null ? autolinker.link(String(feature.properties['name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+                <tr><td><b>Operator:</b></td><td>' + (feature.properties['operator'] !== null ? autolinker.link(String(feature.properties['operator']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+                <tr><td><b>Source:</b></td><td>' + (feature.properties['source'] !== null ? autolinker.link(String(feature.properties['source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+                <tr><td><b>Voltage:</b></td><td>' + (feature.properties['voltage'] !== null ? autolinker.link(String(feature.properties['voltage']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+            </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
             layer.on('popupopen', function(e) {
                 addClassToPopupIfMedia(content, e.popup);
@@ -690,21 +670,11 @@
                 mouseover: highlightFeature,
             });
             var popupContent = '<table>\
-                    <tr><td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(String(feature.properties['id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['F_id'] !== null ? autolinker.link(String(feature.properties['F_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['cables'] !== null ? autolinker.link(String(feature.properties['cables']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['circuits'] !== null ? autolinker.link(String(feature.properties['circuits']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['descriptio'] !== null ? autolinker.link(String(feature.properties['descriptio']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['frequency'] !== null ? autolinker.link(String(feature.properties['frequency']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['line'] !== null ? autolinker.link(String(feature.properties['line']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(String(feature.properties['name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['note'] !== null ? autolinker.link(String(feature.properties['note']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['operator'] !== null ? autolinker.link(String(feature.properties['operator']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['source'] !== null ? autolinker.link(String(feature.properties['source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['voltage'] !== null ? autolinker.link(String(feature.properties['voltage']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['wires'] !== null ? autolinker.link(String(feature.properties['wires']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['length'] !== null ? autolinker.link(String(feature.properties['length']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                </table>';
+                <tr><td><b>Name:</b></td><td>' + (feature.properties['name'] !== null ? autolinker.link(String(feature.properties['name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+                <tr><td><b>Operator:</b></td><td>' + (feature.properties['operator'] !== null ? autolinker.link(String(feature.properties['operator']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+                <tr><td><b>Source:</b></td><td>' + (feature.properties['source'] !== null ? autolinker.link(String(feature.properties['source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+                <tr><td><b>Voltage:</b></td><td>' + (feature.properties['voltage'] !== null ? autolinker.link(String(feature.properties['voltage']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+            </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
             layer.on('popupopen', function(e) {
                 addClassToPopupIfMedia(content, e.popup);
@@ -754,37 +724,11 @@
                 mouseover: highlightFeature,
             });
             var popupContent = '<table>\
-                    <tr><th scope="row">id</th><td class="visible-with-data" id="id">' + (feature.properties['id'] !== null ? autolinker.link(String(feature.properties['id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">F_id</th><td class="visible-with-data" id="F_id">' + (feature.properties['F_id'] !== null ? autolinker.link(String(feature.properties['F_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">cables</th><td class="visible-with-data" id="cables">' + (feature.properties['cables'] !== null ? autolinker.link(String(feature.properties['cables']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">circuits</th><td class="visible-with-data" id="circuits">' + (feature.properties['circuits'] !== null ? autolinker.link(String(feature.properties['circuits']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">descriptio</th><td class="visible-with-data" id="descriptio">' + (feature.properties['descriptio'] !== null ? autolinker.link(String(feature.properties['descriptio']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">ele</th><td class="visible-with-data" id="ele">' + (feature.properties['ele'] !== null ? autolinker.link(String(feature.properties['ele']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">fixme</th><td class="visible-with-data" id="fixme">' + (feature.properties['fixme'] !== null ? autolinker.link(String(feature.properties['fixme']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">frequency</th><td class="visible-with-data" id="frequency">' + (feature.properties['frequency'] !== null ? autolinker.link(String(feature.properties['frequency']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">layer</th><td class="visible-with-data" id="layer">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">level</th><td class="visible-with-data" id="level">' + (feature.properties['level'] !== null ? autolinker.link(String(feature.properties['level']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">line</th><td class="visible-with-data" id="line">' + (feature.properties['line'] !== null ? autolinker.link(String(feature.properties['line']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">name</th><td class="visible-with-data" id="name">' + (feature.properties['name'] !== null ? autolinker.link(String(feature.properties['name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">name_it</th><td class="visible-with-data" id="name_it">' + (feature.properties['name_it'] !== null ? autolinker.link(String(feature.properties['name_it']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">not_operat</th><td class="visible-with-data" id="not_operat">' + (feature.properties['not_operat'] !== null ? autolinker.link(String(feature.properties['not_operat']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">note</th><td class="visible-with-data" id="note">' + (feature.properties['note'] !== null ? autolinker.link(String(feature.properties['note']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">operator</th><td class="visible-with-data" id="operator">' + (feature.properties['operator'] !== null ? autolinker.link(String(feature.properties['operator']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">operator_i</th><td class="visible-with-data" id="operator_i">' + (feature.properties['operator_i'] !== null ? autolinker.link(String(feature.properties['operator_i']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">operator_s</th><td class="visible-with-data" id="operator_s">' + (feature.properties['operator_s'] !== null ? autolinker.link(String(feature.properties['operator_s']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">operator_t</th><td class="visible-with-data" id="operator_t">' + (feature.properties['operator_t'] !== null ? autolinker.link(String(feature.properties['operator_t']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">operator_w</th><td class="visible-with-data" id="operator_w">' + (feature.properties['operator_w'] !== null ? autolinker.link(String(feature.properties['operator_w']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">operator_1</th><td class="visible-with-data" id="operator_1">' + (feature.properties['operator_1'] !== null ? autolinker.link(String(feature.properties['operator_1']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">owner</th><td class="visible-with-data" id="owner">' + (feature.properties['owner'] !== null ? autolinker.link(String(feature.properties['owner']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">owner_shor</th><td class="visible-with-data" id="owner_shor">' + (feature.properties['owner_shor'] !== null ? autolinker.link(String(feature.properties['owner_shor']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">ownership</th><td class="visible-with-data" id="ownership">' + (feature.properties['ownership'] !== null ? autolinker.link(String(feature.properties['ownership']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">power</th><td class="visible-with-data" id="power">' + (feature.properties['power'] !== null ? autolinker.link(String(feature.properties['power']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">ref</th><td class="visible-with-data" id="ref">' + (feature.properties['ref'] !== null ? autolinker.link(String(feature.properties['ref']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">source</th><td class="visible-with-data" id="source">' + (feature.properties['source'] !== null ? autolinker.link(String(feature.properties['source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">voltage</th><td class="visible-with-data" id="voltage">' + (feature.properties['voltage'] !== null ? autolinker.link(String(feature.properties['voltage']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">wires</th><td class="visible-with-data" id="wires">' + (feature.properties['wires'] !== null ? autolinker.link(String(feature.properties['wires']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><th scope="row">length</th><td class="visible-with-data" id="length">' + (feature.properties['length'] !== null ? autolinker.link(String(feature.properties['length']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                </table>';
+                <tr><td><b>Name:</b></td><td>' + (feature.properties['name'] !== null ? autolinker.link(String(feature.properties['name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+                <tr><td><b>Operator:</b></td><td>' + (feature.properties['operator'] !== null ? autolinker.link(String(feature.properties['operator']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+                <tr><td><b>Source:</b></td><td>' + (feature.properties['source'] !== null ? autolinker.link(String(feature.properties['source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+                <tr><td><b>Voltage:</b></td><td>' + (feature.properties['voltage'] !== null ? autolinker.link(String(feature.properties['voltage']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+            </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
             layer.on('popupopen', function(e) {
                 addClassToPopupIfMedia(content, e.popup);
@@ -834,21 +778,9 @@
                 mouseover: highlightFeature,
             });
             var popupContent = '<table>\
-                    <tr><td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(String(feature.properties['OBJECTID']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(String(feature.properties['name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['voltage'] !== null ? autolinker.link(String(feature.properties['voltage']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['zone_numer'] !== null ? autolinker.link(String(feature.properties['zone_numer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['station_na'] !== null ? autolinker.link(String(feature.properties['station_na']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['lat'] !== null ? autolinker.link(String(feature.properties['lat']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['lon'] !== null ? autolinker.link(String(feature.properties['lon']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['carrier'] !== null ? autolinker.link(String(feature.properties['carrier']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['zone'] !== null ? autolinker.link(String(feature.properties['zone']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['region'] !== null ? autolinker.link(String(feature.properties['region']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['transmissi'] !== null ? autolinker.link(String(feature.properties['transmissi']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['year_of_co'] !== null ? autolinker.link(String(feature.properties['year_of_co']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                    <tr><td colspan="2">' + (feature.properties['ngcp_area'] !== null ? autolinker.link(String(feature.properties['ngcp_area']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
-                </table>';
+                <tr><td><b>Name:</b></td><td>' + (feature.properties['name'] !== null ? autolinker.link(String(feature.properties['name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+                <tr><td><b>Voltage:</b></td><td>' + (feature.properties['voltage'] !== null ? autolinker.link(String(feature.properties['voltage']).replace(/'/g, '\'').toLocaleString()) : '') + '</td></tr>\
+            </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
             layer.on('popupopen', function(e) {
                 addClassToPopupIfMedia(content, e.popup);
