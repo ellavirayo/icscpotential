@@ -954,42 +954,52 @@
             }
         });
 
-        var overlaysTree = [
-        {label: '<b>Base Layers</b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/Substations_27.png" /> Substations', layer: layer_Substations_27, default: true},
-            {label: '<img src="legend/ExistingTransmissionLinesfromNGCP_26.png" /> Existing Transmission Lines (from NGCP)', layer: layer_ExistingTransmissionLinesfromNGCP_26, default: true},
-            {label: '<img src="legend/TDP20212030_25.png" /> TDP 2021-2030', layer: layer_TDP20212030_25, default: true},
-            {label: '<img src="legend/TDP20312040_24.png" /> TDP 2031-2040', layer: layer_TDP20312040_24, default: true},
-            {label: '<img src="legend/TDP20412050_23.png" /> TDP 2041-2050', layer: layer_TDP20412050_23, default: true},
-            {label: '<img src="legend/AOIEasternVisayas_22.png" /> AOI (Eastern Visayas)', layer: layer_AOIEasternVisayas_22, default: true},]},
-        {label: '<b>Large-Scale RE Sites</b>', collapsed: true, selectAllCheckbox: true, children: [
-            {label: "Solar Energy", layer: layer_SolarEnergy_21, default: false},
-            {label: "Wind Energy (100m)", layer: layer_WindEnergy100m_20, default: false},
-            {label: "Biomass Energy (Coco shell, husk)", layer: layer_BiomassEnergyCocoshellhusk_19, default: false},]},
-        {label: '<b>Small-Scale RE Sites</b>', collapsed: true, selectAllCheckbox: true, children: [
-            {label: "Solar Energy", layer: layer_SolarEnergy_18, default: false},
-            {label: "Wind Energy (80m)", layer: layer_WindEnergy80m_17, default: false},
-            {label: "Biomass Energy (Coco shell, husk)", layer: layer_BiomassEnergyCocoshellhusk_16, default: false},]},
-        {label: '<b>Solar Outlook - 2030 to 2050</b>', collapsed: true, selectAllCheckbox: true, children: [
-            {label: "Solar - Current", layer: layer_SolarCurrent_15, default: false},
-            {label: "Solar - 2030", layer: layer_Solar2030_14, default: false},
-            {label: "Solar - 2040", layer: layer_Solar2040_13, default: false},
-            {label: "Solar - 2050", layer: layer_Solar2050_12, default: false},]},
-        {label: '<b>Wind Outlook - 2030 to 2050 (100m)</b>', collapsed: true, selectAllCheckbox: true, children: [
-            {label: "Wind - Current", layer: layer_WindCurrent_11, default: false},
-            {label: "Wind - 2030", layer: layer_Wind2030_10, default: false},
-            {label: "Wind - 2040", layer: layer_Wind2040_9, default: false},
-            {label: "Wind - 2050", layer: layer_Wind2050_8, default: false},]},
-        {label: '<b>Biomass Outlook - 2030 to 2050</b>', collapsed: true, selectAllCheckbox: true, children: [
-            {label: "Biomass - Current", layer: layer_BiomassCurrent_7, default: false},
-            {label: "Biomass - 2030", layer: layer_Biomass2030_6, default: false},
-            {label: "Biomass - 2040", layer: layer_Biomass2040_5, default: false},
-            {label: "Biomass - 2050", layer: layer_Biomass2050_4, default: false},]},
-        {label: '<b>Potential Wind Areas at Different Heights</b>', collapsed: true, selectAllCheckbox: true, children: [
-            {label: "Wind Energy (80m)", layer: layer_WindEnergy80m_3, default: false},
-            {label: "Wind Energy (100m)", layer: layer_WindEnergy100m_2, default: false},
-            {label: "Wind Energy (150m)", layer: layer_WindEnergy150m_1, default: false},]},
-            {label: "Carto Light", layer: layer_CartoLight_0, radioGroup: 'bm', default: true },]
+var overlaysTree = [
+    {label: '<b>Base Layers</b>',  selectAllCheckbox: true, children: [
+        {label: '<img src="legend/Substations_27.png" /> Substations', layer: layer_Substations_27, default: true},
+        {label: '<img src="legend/ExistingTransmissionLinesfromNGCP_26.png" /> Existing Transmission Lines (from NGCP)', layer: layer_ExistingTransmissionLinesfromNGCP_26, default: true},
+        {label: '<img src="legend/TDP20212030_25.png" /> TDP 2021-2030', layer: layer_TDP20212030_25, default: true},
+        {label: '<img src="legend/TDP20312040_24.png" /> TDP 2031-2040', layer: layer_TDP20312040_24, default: true},
+        {label: '<img src="legend/TDP20412050_23.png" /> TDP 2041-2050', layer: layer_TDP20412050_23, default: true},
+        {label: '<img src="legend/AOIEasternVisayas_22.png" /> AOI (Eastern Visayas)', layer: layer_AOIEasternVisayas_22, default: true},
+    ]},
+
+    {label: '<b>Large-Scale RE Sites</b>', collapsed: true, selectAllCheckbox: false, children: [
+        {label: "Solar Energy", layer: layer_SolarEnergy_21, default: false, radioGroup: 'raster'},
+        {label: "Wind Energy (100m)", layer: layer_WindEnergy100m_20, default: false, radioGroup: 'raster'},
+        {label: "Biomass Energy (Coco shell, husk)", layer: layer_BiomassEnergyCocoshellhusk_19, default: false, radioGroup: 'raster'},
+    ]},
+    {label: '<b>Small-Scale RE Sites</b>', collapsed: true, selectAllCheckbox: false, children: [
+        {label: "Solar Energy", layer: layer_SolarEnergy_18, default: false, radioGroup: 'raster'},
+        {label: "Wind Energy (80m)", layer: layer_WindEnergy80m_17, default: false, radioGroup: 'raster'},
+        {label: "Biomass Energy (Coco shell, husk)", layer: layer_BiomassEnergyCocoshellhusk_16, default: false, radioGroup: 'raster'},
+    ]},
+    {label: '<b>Solar Outlook - 2030 to 2050</b>', collapsed: true, selectAllCheckbox: false, children: [
+        {label: "Solar - Current", layer: layer_SolarCurrent_15, default: false, radioGroup: 'raster'},
+        {label: "Solar - 2030", layer: layer_Solar2030_14, default: false, radioGroup: 'raster'},
+        {label: "Solar - 2040", layer: layer_Solar2040_13, default: false, radioGroup: 'raster'},
+        {label: "Solar - 2050", layer: layer_Solar2050_12, default: false, radioGroup: 'raster'},
+    ]},
+    {label: '<b>Wind Outlook - 2030 to 2050 (100m)</b>', collapsed: true, selectAllCheckbox: false, children: [
+        {label: "Wind - Current", layer: layer_WindCurrent_11, default: false, radioGroup: 'raster'},
+        {label: "Wind - 2030", layer: layer_Wind2030_10, default: false, radioGroup: 'raster'},
+        {label: "Wind - 2040", layer: layer_Wind2040_9, default: false, radioGroup: 'raster'},
+        {label: "Wind - 2050", layer: layer_Wind2050_8, default: false, radioGroup: 'raster'},
+    ]},
+    {label: '<b>Biomass Outlook - 2030 to 2050</b>', collapsed: true, selectAllCheckbox: false, children: [
+        {label: "Biomass - Current", layer: layer_BiomassCurrent_7, default: false, radioGroup: 'raster'},
+        {label: "Biomass - 2030", layer: layer_Biomass2030_6, default: false, radioGroup: 'raster'},
+        {label: "Biomass - 2040", layer: layer_Biomass2040_5, default: false, radioGroup: 'raster'},
+        {label: "Biomass - 2050", layer: layer_Biomass2050_4, default: false, radioGroup: 'raster'},
+    ]},
+    {label: '<b>Potential Wind Areas at Different Heights</b>', collapsed: true, selectAllCheckbox: false, children: [
+        {label: "Wind Energy (80m)", layer: layer_WindEnergy80m_3, default: false, radioGroup: 'raster'},
+        {label: "Wind Energy (100m)", layer: layer_WindEnergy100m_2, default: false, radioGroup: 'raster'},
+        {label: "Wind Energy (150m)", layer: layer_WindEnergy150m_1, default: false, radioGroup: 'raster'},
+    ]},
+
+    {label: "Carto Light (Basemap)", layer: layer_CartoLight_0, radioGroup: 'bm', default: true },
+];
 
         var lay = L.control.layers.tree(null, overlaysTree,{
             collapsed: false,
